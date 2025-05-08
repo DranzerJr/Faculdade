@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int HI,HF,MI,MF,H, M;
+    cout << "que horas o jogo inciou ?: ";
+    cin >> HI; 
+    cout << "em qual minuto ?: ";
+    cin >> MI; 
+    cout << "que horas o jogo terminou?: ";
+    cin >> HF;
+    cout << "em qual minuto?: ";
+    cin　>> MF;
+    
+    if(HF<HI)
+    HF = HF  + 24;
+    
+    H = HF - HI; 
+    
+    if(MF<MI){
+    MF = MF + 60;
+    H = H - 1;} 
+    
+    M = MF - MI;
+    
+    cout << "o tempo de jogo foi: " << H << ":" << M;
+    
+    
+    return 0;
+}
